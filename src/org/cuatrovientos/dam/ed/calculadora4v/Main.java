@@ -6,6 +6,7 @@ public class Main {
 		float numero1;
 		float numero2;
 		Scanner scanner = new Scanner(System.in);
+		
 		//Menú de la calculadora
 		
 			System.out.println("CALCULADORA");
@@ -49,8 +50,12 @@ public class Main {
 				System.out.println("Multiplicación de los números: " + (numero1 * numero2));
 				break;
 			case 4:
-				System.out.println("División de los números: " + (numero1 / numero2));
-				break;
-		}			
+				 if (numero2 == 0) {
+                     System.out.println("Error: no se puede dividir entre cero");
+                 } else {
+                	 System.out.println("División de los números: " + (numero1 / numero2));
+                	 break;	
+                 }
+		}		
 	}
 }
